@@ -174,3 +174,13 @@ app.get("/canal/youtube", function(req,res){
     
 })
 ```
+
+# Instalando MySQL
+
+- https://www.mysql.com/
+
+- Faça o download do MySQL Community Server
+
+# Tabelas
+
+
