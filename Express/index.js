@@ -15,29 +15,14 @@ app.get("/",function(req,res){
     res.send("<h1>Bem vindo ao Site</h1>")
 })
 
-//Parametro obrigatorio
-app.get("/ola/:nome/:empresa", function(req,res){
-    // req => Dados enviados pelo servidor
-    // res => Respostas que vai ser enviada pelo usuario
+app.get("/canal/youtube", function(req,res){
 
-    var nome = req.params.nome
-    var empresa = req.params.empresa
-    
-    res.send("<h1>Oi "+ nome +" da "+ empresa +"</h1>")
-})
+    var canal = req.query["canal"]
 
-//Parametro não obrigatorio
-app.get("/blog/:artigo?", function(req,res){
-    // req => Dados enviados pelo servidor
-    // res => Respostas que vai ser enviada pelo usuario
-
-    var artigo = req.params.artigo
-
-    if(artigo) {
-        res.send(`<h2>Artigo: ${artigo}</h2>`)
+    if(canal) {
+        res.send(`<h1>Bem vindo ao ${canal}</h1>`)
     } else {
-        res.send("<h1>Bem vindo ao Meu Blog</h1>")
+        res.send(`Nenhum canal passado!!`)
     }
     
-    res.send("<h1>Oi "+ nome +" da "+ empresa +"</h1>")
 })
