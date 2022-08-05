@@ -183,4 +183,38 @@ app.get("/canal/youtube", function(req,res){
 
 # Tabelas
 
+- Para logar no MySQL via cmd -> mysql -h localhost -u root -p
 
+```SQL
+// Para ver todos os DataBases
+SHOW DATABASES;
+```
+
+```SQL
+// Para criar um Database
+CREATE DATABASE sistemadecadastro;
+```
+
+```SQL
+// Para acessar um Banco de Dados
+USE sistemadecadastro;
+```
+
+```SQL
+// Para listar todas as tabelas dentro do Banco de Dados
+SHOW TABLES;
+```
+
+```SQL
+// Para criar uma tabela dentro do Banco de Dados
+CREATE TABLE usuario(
+  nome VARCHAR(50),
+  email VARCHAR(100),
+  idade INT
+);
+```
+
+```SQL
+// Para mostrar a estrutura da tabela dentro do Banco de Dados
+DESCRIBE usuario;
+```
