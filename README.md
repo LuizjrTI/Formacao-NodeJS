@@ -186,28 +186,28 @@ app.get("/canal/youtube", function(req,res){
 - Para logar no MySQL via cmd -> mysql -h localhost -u root -p
 
 ```SQL
-// Para ver todos os DataBases
+-- Para ver todos os DataBases
 SHOW DATABASES;
 ```
 
 ```SQL
-// Para criar um Database
+--Para criar um Database
 CREATE DATABASE sistemadecadastro;
 ```
 
 ```SQL
-// Para acessar um Banco de Dados
+--Para acessar um Banco de Dados
 USE sistemadecadastro;
 ```
 
 ```SQL
-// Para listar todas as tabelas dentro do Banco de Dados
+--Para listar todas as tabelas dentro do Banco de Dados
 SHOW TABLES;
 ```
 
 ```SQL
-// Para criar uma tabela dentro do Banco de Dados
-CREATE TABLE usuario(
+--Para criar uma tabela dentro do Banco de Dados
+CREATE TABLE usuarios(
   nome VARCHAR(50),
   email VARCHAR(100),
   idade INT
@@ -215,6 +215,68 @@ CREATE TABLE usuario(
 ```
 
 ```SQL
-// Para mostrar a estrutura da tabela dentro do Banco de Dados
-DESCRIBE usuario;
+--Para mostrar a estrutura da tabela dentro do Banco de Dados
+DESCRIBE usuarios;
 ```
+
+# Insert, Select e Where
+
+```SQL
+--Para inserir dados dentro tabela no Banco de Dados
+INSERT INTO usuarios(nome,email,idade)
+VALUES("Luiz Junior","email@teste.com",30);
+```
+
+```SQL
+--Para listar os dados da tabela dentro do Banco de Dados
+SELECT * FROM usuarios;
+```
+
+```SQL
+--Para listar os dados da tabela com alguma condição a ser respeitada
+SELECT * FROM usuarios WHERE idade = 30;
+```
+
+# Delete
+
+- Erro gravissimo em Banco de Dados
+
+```SQL
+--Nunca em hipotese alguma use DELETE sem o WHERE
+DELETE FROM usuarios;
+```
+
+- Forma correta de usar o DELETE
+
+```SQL
+--Para deletar um dado dentro da tabela
+DELETE FROM usuarios WHERE nome = "Luiz";
+```
+
+# Update
+- Erro gravissimo em Banco de Dados
+
+```SQL
+--Para atualizar um dado dentro da tabela
+UPDATE usuarios SET nome = "Nome de Teste", email="email@teste2.com";
+```
+
+- Forma correta de usar o UPDATE
+
+```SQL
+--Para atualizar um dado dentro da tabela
+UPDATE usuarios SET nome = "Nome de Teste", email = "email@teste2.com" WHERE nome = "Luiz";
+```
+
+# [Projeto #01] Criando uma plataforma de perguntas e Respostas
+
+
+## Plataforma de perguntas e respostas
+
+- Bem similar ao yahoo respostas
+
+## EJS e criação de projeto
+
+- EJS
+
+- Para instalar o EJS use `npm install ejs --save`
