@@ -15,6 +15,8 @@
 
 - É necessario criar uma pasta views
 
+- Utiliza res.render para renderizar o HTML
+
 ```html
 <!--index.ejs-->
 
