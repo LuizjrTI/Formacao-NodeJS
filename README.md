@@ -241,6 +241,8 @@ SELECT * FROM usuarios WHERE idade = 30;
 
 - Erro gravissimo em Banco de Dados
 
+- Ele deleta todos os dados do banco. 
+
 ```SQL
 --Nunca em hipotese alguma use DELETE sem o WHERE
 DELETE FROM usuarios;
@@ -256,6 +258,8 @@ DELETE FROM usuarios WHERE nome = "Luiz";
 # Update
 - Erro gravissimo em Banco de Dados
 
+- Ele subistitui todos os dados do banco.
+
 ```SQL
 --Para atualizar um dado dentro da tabela
 UPDATE usuarios SET nome = "Nome de Teste", email="email@teste2.com";
@@ -267,16 +271,3 @@ UPDATE usuarios SET nome = "Nome de Teste", email="email@teste2.com";
 --Para atualizar um dado dentro da tabela
 UPDATE usuarios SET nome = "Nome de Teste", email = "email@teste2.com" WHERE nome = "Luiz";
 ```
-
-# [Projeto #01] Criando uma plataforma de perguntas e Respostas
-
-
-## Plataforma de perguntas e respostas
-
-- Bem similar ao yahoo respostas
-
-## EJS e criação de projeto
-
-- EJS
-
-- Para instalar o EJS use `npm install ejs --save`
