@@ -544,3 +544,11 @@ app.listen(4000, () => {
 
 </html>
 ```
+
+## Reutilizando html com partials
+
+- Forma correta de realizar os includes.
+
+- <%- include('partials/header.ejs'); %>.
+
+- A utilização de partials evita a reescrita desnecessaria de HTML.
