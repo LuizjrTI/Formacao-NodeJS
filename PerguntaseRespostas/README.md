@@ -259,6 +259,8 @@ app.listen(4000, () => {
 
 ## Arquivos estaticos
 
+- O nome public é usado por convenção, porem pode ser substituido por qualquer um
+
 ```javaScript
 //seta os arquivos estaticos da aplicação como imagens/css/javasript do front-end
 app.use(express.static('public'));
