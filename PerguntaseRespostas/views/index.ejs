@@ -2,39 +2,28 @@
 <!DOCTYPE html>
 
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perguntas e Respostas</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Exibir valor de uma variavel EJS-->
-    <%= nome %>
-    <%= lang %>
-    <%= empresa %>
-    <%= salario %>
+    <%= nome %> <%= lang %> <%= empresa %> <%= salario %>
 
     <p>Nome:<%= nome %></p>
     <p>Linguagem de programação favorita: <%= lang %></p>
-    <p>Empresa em que mais se destaca:  <%= empresa %></p>
-    <p>Salario:  <%= salario %> </p>
-    
-    //mensagem vinda do back-end
-    <%= msg %>
+    <p>Empresa em que mais se destaca: <%= empresa %></p>
+    <p>Salario: <%= salario %></p>
 
-    //If sem o else
-    <%if(msg==true){%>
-        <h3>Isso é uma mensagem de erro!</h3>
-    <%}%>
-    
 
-    //if e else
-    <%if(msg ==true){%>
-        <h3>Isso é uma mensagem de erro!</h3>
-    <%}else{%>
-        <h3>Nenhum erro!!!</h3>
-    <%}%>
+    <h1>Lista do Mercado</h1>
 
-</body>
+    <% listadeProdutos.forEach(function(produto){%>
+        <h4><%= produto.nome %></h4>
+        <h5><%= produto.preco %></h5>
+        <hr>
+    <% }) %>
+  </body>
 </html>
