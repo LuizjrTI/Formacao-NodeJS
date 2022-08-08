@@ -375,4 +375,70 @@ app.listen(4000, () => {
 
 ```
 
+## Criando o formulario de perguntas
 
+```html
+<!--Index.ejs-->
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Perguntas e Respostas</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <h3>
+            Realizar pergunta
+        </h3>
+        <form action="">
+            <label>Título</label>
+            <input type="text" placeholder="Título" class="form-control">
+            <br>
+            <label> Descrição da pergunta</label>
+            <textarea class="form-control" placeholder="Descreva sua pergunta aqui"></textarea>
+            <br>
+            <button class="btn btn-primary" type="button">Perguntar</button>
+        </form>
+    </div>
+    
+    
+  </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</html>
+
+```
+
+```Javascript
+//index.js
+const express = require("express");
+const app = express();
+
+//Estou dizendo para o Express usar o EJS como View Engine
+app.set('view engine','ejs')
+//seta os arquivos estaticos da aplicação como imagens/css/ javasript do front-end
+app.use(express.static('public'));
+
+
+app.get("/", (req, res) => { 
+  res.render("index")
+});
+
+//http://localhost:4000/perguntar
+app.get("/perguntar",(req,res)=>{
+  res.render("perguntar")
+})
+
+app.listen(4000, () => {
+  console.log("App rodando!");
+});
+
+```
