@@ -552,3 +552,13 @@ app.listen(4000, () => {
 - <%- include('partials/header.ejs'); %>.
 
 - A utilização de partials evita a reescrita desnecessaria de HTML.
+
+## Envio de formulario para o Node
+
+-  necessario criar a rota para recebimento dos dados.
+
+Ex:
+
+```html
+<form action="/salvarpergunta" method="POST"></form>
+```

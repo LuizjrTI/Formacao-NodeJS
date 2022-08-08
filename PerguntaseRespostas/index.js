@@ -16,6 +16,10 @@ app.get("/perguntar",(req,res)=>{
   res.render("perguntar")
 })
 
+app.post("/salvarpergunta",(req,res)=>{
+  res.send("Dados recebidos!!!")
+})
+
 app.listen(4000, () => {
   console.log("App rodando!");
 });
