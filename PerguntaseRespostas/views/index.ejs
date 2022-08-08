@@ -1,4 +1,6 @@
+<!--Index.ejs-->
 <!DOCTYPE html>
+
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -17,8 +19,22 @@
     <p>Linguagem de programação favorita: <%= lang %></p>
     <p>Empresa em que mais se destaca:  <%= empresa %></p>
     <p>Salario:  <%= salario %> </p>
+    
+    //mensagem vinda do back-end
+    <%= msg %>
 
+    //If sem o else
+    <%if(msg==true){%>
+        <h3>Isso é uma mensagem de erro!</h3>
+    <%}%>
+    
 
+    //if e else
+    <%if(msg ==true){%>
+        <h3>Isso é uma mensagem de erro!</h3>
+    <%}else{%>
+        <h3>Nenhum erro!!!</h3>
+    <%}%>
 
 </body>
 </html>
