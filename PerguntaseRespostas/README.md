@@ -562,3 +562,14 @@ Ex:
 ```html
 <form action="/salvarpergunta" method="POST"></form>
 ```
+
+## Capturando dados de um formulario
+
+- npm install body-parser --save
+
+```JavaScript
+const bodyParser = require("body-parser")
+
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+```
